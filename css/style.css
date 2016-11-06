@@ -4,14 +4,11 @@ padding: 0;
 }
 body {
 	min-width: 960px;
-
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 24px;
-	font-family: "PT Sans Narrow", "Arial", sans-serif;
-	color: #ffffff;
+    background: #000000 url("../img/white-background.png") no-repeat center top;
+    color: #ffffff;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+	font-weight: bold;	
 	text-transform: uppercase;
-
-	background: #000000 url("../img/white-background.png") ;
-
 }

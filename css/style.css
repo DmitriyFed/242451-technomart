@@ -1,0 +1,14 @@
+html, body{
+margin: 0;
+padding: 0;
+}
+body {
+	min-width: 960px;
+    background: #000000 url("../img/white-background.png") no-repeat center top;
+    color: #ffffff;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+	font-weight: bold;	
+	text-transform: uppercase;
+}

@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" 
-     href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
-     <link rel="stylesheet" href="fonts/cuprum.css">
-     <link rel="stylesheet" href="fonts/opensans/opensans.css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+     <link rel="stylesheet" href="css/normalize.css">
      <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -16,38 +14,37 @@
                <form method="post" class="search" action="#" name="search">
                    <input type="text" placeholder="Поиск:" name="search-item" id="search-item"><label></label>
                </form>  
-               <a class="order" href="#">Оформить заказ</a>  
-               <p class="user-panel busket">Корзина:
+               <a class="order" href="#">Оформить заказ</a>       
+               <a class="user-panel bookmark" href="#">Закладки:
                   <span class="number">0</span>
-               </p>          
-               <p class="user-panel bookmark">Закладки:
+               </a>
+               <a class="user-panel busket" href="#">Корзина:
                   <span class="number">0</span>
-               </p>
+               </a> 
             </div>
    </section>
-   <header class="top-header">
-   
+   <header class="top-header">  
       <div class="layout-center-wrapper">
-                  <div class="action-contact-description clearfix">
-                  <h2 class="description">Интернет-магазин строительных материалов и инструментов для ремонта</h2>
-                    <div class="contact">
-                        <p class="contact-tel">+7 (495) 555-05-55</p>
-                        <p class="contact-adress">г. Санкт-Петербург, ул. Б. Конюшенная, 19/8</p>
-                    </div>
-                        <div class="account-menu">
-                        <div class="enter-registr">
-                            <a class="account-menu-enter" href="#">Войти</a>
-                            <a class="account-menu-registration" href="#">Регистрация</a>
-                        </div>
-                        <div class="user-panel-block account-no-visible">
-                            <p class="account-menu-user-panel">Равшан Джамшутович<a href="#" class="account-menu-exit"></a></p>
-                            <div class="account-menu-user-links">
-                                <a href="#">Мои заказы</a>
-                                <span class="point"></span>
-                                <a href="#">Личный кабинет</a>
-                            </div>
-                        </div>                     
-                    </div>
+                <div class="action-contact-description clearfix">
+                <h2 class="description">Интернет-магазин строительных материалов и инструментов для ремонта</h2>
+                <div class="contact">
+                <p class="contact-tel">+7 (495) 555-05-55</p>
+                <p class="contact-adress">г. Санкт-Петербург, ул. Б. Конюшенная, 19/8</p>
+                </div>
+                <div class="account-menu">
+                <div class="enter-registr">
+                <a class="account-menu-enter" href="#">Войти</a>
+                <a class="account-menu-registration" href="#">Регистрация</a>
+                </div>
+                <div class="user-panel-block account-no-visible">
+                <p class="account-menu-user-panel">Равшан Джамшутович<a href="#" class="account-menu-exit"></a></p>
+                <div class="account-menu-user-links">
+                <a href="#">Мои заказы</a>
+                <span class="point"></span>
+                <a href="#">Личный кабинет</a>
+                </div>
+                </div>                     
+                </div>
                  </div>
                      <nav class="main-menu">
                      <ul>
@@ -171,22 +168,30 @@
                     </div>
                 </div> 
           </div>
+           <article class="modal-add-product">
+          <span class="icon"></span>
+          <span>Товар добавлен в корзину!</span>
+          <button class="modal-content-close-buy" type="button"></button>
+          <div class="add-product-button">
+            <a class="btn active-btn" href="#ordering">Оформить заказ</a>
+            <a class="btn" href="#">Продолжить Покупки</a>
+          </div>
+        </article>
           <div class="popular-manufacturers clearfix">
                     <h2 class="popular-title">Популярные производители: <a href="#" class="btn">Все производители</a></h2>    
                     <div class="manufacturers">
-                        <a class="manufacturer-logo" title="BOSH" href="#"><img src="img/bosch.png" alt="BOSH" width="126" height="37"></a>
-                        <a class="manufacturer-logo" title="Makita" href="#"><img src="img/Makita.png" alt="Makita" width="123" height="40"></a>
-                        <a class="manufacturer-logo" title="DeWalt" href="#"><img src="img/dewalt.jpg" alt="DeWalt" width="146" height="44"></a>
-                        <a class="manufacturer-logo" title="Интерскол" href="#"><img src="img/inter.jpg" alt="Интерскол" width="200" height="88"></a>
-                        <a class="manufacturer-logo" title="Hitachi" href="#"><img src="img/Hitachi.jpg" alt="Hitachi" width="169" height="31"></a>
-                        <a class="manufacturer-logo" title="LG" href="#"><img src="img/lg.jpg" alt="LG" width="121" height="73"></a>
-                        <a class="manufacturer-logo" title="AEG" href="#"><img src="img/aeg.jpg" alt="AEG" width="151" height="96"></a>
-                        <a class="manufacturer-logo" title="Metabo" href="#"><img src="img/Metabo.jpg" alt="Metabo" width="204" height="69"></a>
+                        <a class="manufacturer-logo" title="bosh" href="#"><img src="img/bosch.png" alt="BOSH" width="126" height="37"></a>
+                        <a class="manufacturer-logo" title="makita" href="#"><img src="img/makita.png" alt="Makita" width="123" height="40"></a>
+                        <a class="manufacturer-logo" title="deWalt" href="#"><img src="img/dewalt.jpg" alt="DeWalt" width="146" height="44"></a>
+                        <a class="manufacturer-logo" title="интерскол" href="#"><img src="img/inter.jpg" alt="Интерскол" width="200" height="88"></a>
+                        <a class="manufacturer-logo" title="hitachi" href="#"><img src="img/hitachi.jpg" alt="Hitachi" width="169" height="31"></a>
+                        <a class="manufacturer-logo" title="lg" href="#"><img src="img/lg.jpg" alt="lg" width="121" height="73"></a>
+                        <a class="manufacturer-logo" title="aeg" href="#"><img src="img/aeg.jpg" alt="aeg" width="151" height="96"></a>
+                        <a class="manufacturer-logo" title="metabo" href="#"><img src="img/metabo.jpg" alt="Metabo" width="204" height="69"></a>
                     </div>
                 </div>                            
          </div> 
       </section>
-
       <section class="service">
             <div class="layout-center-wrapper">
                 <div class="our-service-title">
@@ -207,13 +212,11 @@
                       <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!</p>
                       <p>Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>
                     </div>
-
                     <div class="service-info garantee">
                         <h3 class="service-info-title">Гарантия</h3>
                         <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
                         <p>Дом уж восстановите как-нибудь сами.</p>
                     </div>
-
                    <div class="service-info credit">
                         <h3 class="service-info-title">Кредит</h3>
                         <p>Залезть в долговую яму стало проще!</p>
@@ -268,7 +271,7 @@
                     </div>
                 </div>
             </section>
-<div class="modal-content-map">
+        <div class="modal-content-map">
                 <a href="#" class="write-us-close">Закрыть</a>         
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991035793759!2d30.32192388542382!3d59.938794194914216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1479931915369" width="940" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
@@ -296,7 +299,7 @@
                 </nav>
             </div>
         </section>
-<footer class="footer">
+        <footer class="footer">
             <div class="layout-center-wrapper clearfix">
                 <div class="copyright-left">
                     <p>2010-2013 Компания "Техномарт"</p>
@@ -319,111 +322,122 @@
         </footer>
         <script>
         var enterBlock = document.querySelector(".enter-registr");
-var link = enterBlock.querySelector(".account-menu-enter");
-var userPanel = document.querySelector(".user-panel-block");
-var close = userPanel.querySelector(".account-menu-exit");
+        var link = enterBlock.querySelector(".account-menu-enter");
+        var userPanel = document.querySelector(".user-panel-block");
+        var close = userPanel.querySelector(".account-menu-exit");
 
-link.addEventListener("click", function(event) {
-    event.preventDefault();
-    enterBlock.classList.add("account-no-visible");
-    userPanel.classList.remove("account-no-visible");
-})
-
-close.addEventListener("click", function(event) {
-    event.preventDefault();
-    enterBlock.classList.remove("account-no-visible");
-    userPanel.classList.add("account-no-visible");
-})
-
-if (document.querySelector(".write-us")) {
-    var writeUs = document.querySelector(".write-us");
-    var form = document.querySelector(".write-us-form");
-    var closeForm = form.querySelector(".write-us-close");
-    var namePerson = form.querySelector("#name");
-    var mailPerson = form.querySelector("#email");
-    var textMessage = form.querySelector("#free-text");
-    var storageName = localStorage.getItem("namePerson");
-    var storageMail = localStorage.getItem("mailPerson");
-
-    writeUs.addEventListener("click", function(event) {
-        event.preventDefault();
-        form.classList.add("login-popup-show-animation", "login-popup-show");
-        setTimeout("form.classList.remove('login-popup-show-animation')", 620);
-        if (storageName) {
-            namePerson.value = storageName;
-            if (storageMail) {
-                mailPerson.value = storageMail;
-                textMessage.focus();
-            } else {
-                mailPerson.focus();
-            }
-        } else {
-            namePerson.focus();
-        }
-    });
-
-    closeForm.addEventListener("click", function(event) {
-        event.preventDefault();
-        form.classList.remove("login-popup-show");
-    });
-
-    form.addEventListener("submit", function(event) {
-        if (!(namePerson.value && mailPerson.value)) {
+        link.addEventListener("click", function(event) {
             event.preventDefault();
-            form.classList.add("login-popup-error");
-            setTimeout('form.classList.remove("login-popup-error")', 620);
-        } else {
-            localStorage.setItem("namePerson", namePerson.value);
-            localStorage.setItem("mailPerson", mailPerson.value);
+            enterBlock.classList.add("account-no-visible");
+            userPanel.classList.remove("account-no-visible");
+        })
+
+        close.addEventListener("click", function(event) {
+            event.preventDefault();
+            enterBlock.classList.remove("account-no-visible");
+            userPanel.classList.add("account-no-visible");
+        })
+
+        if (document.querySelector(".write-us")) {
+            var writeUs = document.querySelector(".write-us");
+            var form = document.querySelector(".write-us-form");
+            var closeForm = form.querySelector(".write-us-close");
+            var namePerson = form.querySelector("#name");
+            var mailPerson = form.querySelector("#email");
+            var textMessage = form.querySelector("#free-text");
+            var storageName = localStorage.getItem("namePerson");
+            var storageMail = localStorage.getItem("mailPerson");
+
+            writeUs.addEventListener("click", function(event) {
+                event.preventDefault();
+                form.classList.add("login-popup-show-animation", "login-popup-show");
+                setTimeout("form.classList.remove('login-popup-show-animation')", 620);
+                if (storageName) {
+                    namePerson.value = storageName;
+                    if (storageMail) {
+                        mailPerson.value = storageMail;
+                        textMessage.focus();
+                    } else {
+                        mailPerson.focus();
+                    }
+                } else {
+                    namePerson.focus();
+                }
+            });
+
+            closeForm.addEventListener("click", function(event) {
+                event.preventDefault();
+                form.classList.remove("login-popup-show");
+            });
+
+            form.addEventListener("submit", function(event) {
+                if (!(namePerson.value && mailPerson.value)) {
+                    event.preventDefault();
+                    form.classList.add("login-popup-error");
+                    setTimeout('form.classList.remove("login-popup-error")', 620);
+                } else {
+                    localStorage.setItem("namePerson", namePerson.value);
+                    localStorage.setItem("mailPerson", mailPerson.value);
+                }
+            });
+
+            window.addEventListener("keydown", function(event) {
+                 if (event.keyCode == 27 && form.classList.contains("login-popup-show")) {
+                    form.classList.remove("login-popup-show");
+                 }
+            });
         }
-    });
-
-    window.addEventListener("keydown", function(event) {
-         if (event.keyCode == 27 && form.classList.contains("login-popup-show")) {
-            form.classList.remove("login-popup-show");
-         }
-    });
-}
-
-/* Google maps */
-if (document.querySelector(".map-img")) {
-    var openMap = document.querySelector(".map-img");
-    var modalContentMap = document.querySelector(".modal-content-map");
-    var closeMap = modalContentMap.querySelector(".write-us-close");
-
-    openMap.addEventListener("click", function(event) {
-        event.preventDefault();
-        modalContentMap.classList.add("map-show");
-    })
-
-    closeMap.addEventListener("click", function(event) {
-        event.preventDefault();
-        modalContentMap.classList.remove("map-show");
-    })
-
-    window.addEventListener("keydown", function(event) {
-         if (event.keyCode == 27 && modalContentMap.classList.contains("map-show")) {
-                 modalContentMap.classList.remove("map-show");
-         }
-    });
-
-    function initialize() {
-        var myLatLng = new google.maps.LatLng(55.687031, 37.529618);
-        var mapOptions = {
-            zoom: 16,
-            center: new google.maps.LatLng(55.687463, 37.526496),
-            disableDefaultUI: true
+        var linkbuy = document.querySelectorAll(".actions-buy");
+        var buy = document.querySelector(".modal-add-product");
+        var closebuy = document.querySelector(".modal-content-close-buy");
+        for (var i = 0; i < linkbuy.length; i++) {
+            linkbuy[i].addEventListener("click", function(event) { 
+                event.preventDefault();
+                buy.classList.add("modal-content-show");
+            });
         }
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-        var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map
+
+        closebuy.addEventListener("click",function(event) { 
+            event.preventDefault();
+            buy.classList.remove("modal-content-show");
         });
-    }
-    google.maps.event.addDomListener(window, "load", initialize);
-}
+        /* Google maps */
+        if (document.querySelector(".map-img")) {
+            var openMap = document.querySelector(".map-img");
+            var modalContentMap = document.querySelector(".modal-content-map");
+            var closeMap = modalContentMap.querySelector(".write-us-close");
 
-     
+            openMap.addEventListener("click", function(event) {
+                event.preventDefault();
+                modalContentMap.classList.add("map-show");
+            })
+
+            closeMap.addEventListener("click", function(event) {
+                event.preventDefault();
+                modalContentMap.classList.remove("map-show");
+            })
+
+            window.addEventListener("keydown", function(event) {
+                 if (event.keyCode == 27 && modalContentMap.classList.contains("map-show")) {
+                         modalContentMap.classList.remove("map-show");
+                 }
+            });
+
+            function initialize() {
+                var myLatLng = new google.maps.LatLng(55.687031, 37.529618);
+                var mapOptions = {
+                    zoom: 16,
+                    center: new google.maps.LatLng(55.687463, 37.526496),
+                    disableDefaultUI: true
+                }
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map
+                });
+            }
+            google.maps.event.addDomListener(window, "load", initialize);
+        }
         </script>
     </body>
 </html>

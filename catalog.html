@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" 
-     href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
-     <link rel="stylesheet" href="fonts/cuprum.css">
-     <link rel="stylesheet" href="fonts/opensans/opensans.css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+     <link rel="stylesheet" href="css/normalize.css">
      <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -17,12 +15,12 @@
                    <input type="text" placeholder="Поиск:" name="search-item" id="search-item"><label></label>
                </form>  
                <a class="order" href="#">Оформить заказ</a>  
-               <p class="user-panel busket active">Корзина:
-                  <span class="number">1</span>
-               </p>          
-               <p class="user-panel bookmark">Закладки:
+               <a class="user-panel bookmark" href="#">Закладки:
                   <span class="number">0</span>
-               </p>
+               </a>
+                <a class="user-panel busket active" href="#">Корзина:
+                  <span class="number">1</span>
+               </a> 
             </div>
    </section>
   <header class="top-header">
@@ -34,11 +32,11 @@
                         <p class="contact-adress">г. Санкт-Петербург, ул. Б. Конюшенная, 19/8</p>
                     </div>
                         <div class="account-menu">
-                        <div class="enter-registr">
+                        <div class="enter-registr account-no-visible">
                             <a class="account-menu-enter" href="#">Войти</a>
                             <a class="account-menu-registration" href="#">Регистрация</a>
                         </div>
-                        <div class="user-panel-block account-no-visible">
+                        <div class="user-panel-block">
                             <p class="account-menu-user-panel">Равшан Джамшутович<a href="#" class="account-menu-exit"></a></p>
                             <div class="account-menu-user-links">
                                 <a href="#">Мои заказы</a>
@@ -91,7 +89,7 @@
                                     <input class="max-price" type="text" value="30 000">
                                 </div>
                             </div>
-                <fieldset>
+                </fieldset>
                 <form method="post" class="form-filter" action="#" name="filter">
                             <fieldset class="range-filter">
                                 <div class="set">Производители:</div>
@@ -112,7 +110,6 @@
                             </fieldset>
                         </form>
                 </div>
-
                 <div class="sellers catalog-sellers">
                         <div class="catalog-sellers-title">сортировка: 
                             <a class="sort-down" href="#"></a>
@@ -231,6 +228,15 @@
                                 <p class="item-price item-price-new">12 500 р.</p>
                             </div>
                         </div>
+                        <article class="modal-add-product">
+                                 <span class="icon"></span>
+                                 <span>Товар добавлен в корзину!</span>
+                                 <button class="modal-content-close-buy" type="button"></button>
+                                 <div class="add-product-button">
+                                 <a class="btn active-btn" href="#ordering">Оформить заказ</a>
+                                 <a class="btn" href="#">Продолжить Покупки</a>
+                                 </div>
+                        </article>
                         <div class="paginator">
                             <a class="paginator-prev" href="#prev">Предыдущая</a>
                             <a href="#" class="current">1</a>
@@ -293,23 +299,37 @@
             </div>
         </footer>
         <script>
-        var enterBlock = document.querySelector(".enter-registr");
-        var link = document.querySelector(".account-menu-enter");
-        var userPanel = document.querySelector(".user-panel-block");
-        var close = userPanel.querySelector(".account-menu-exit");
-
-        link.addEventListener("click", function(event){
-          event.preventDefault();
-          enterBlock.classList.add("account-no-visible");
-          userPanel.classList.remove("account-no-visible");
-        });
-
-        close.addEventListener("click", function(event){
-          event.preventDefault();
-          enterBlock.classList.remove("account-no-visible");
-          userPanel.classList.add("account-no-visible");
-        });
         
+var userPanel = document.querySelector(".user-panel-block");
+var close = document.querySelector(".account-menu-exit");
+var enterBlock = document.querySelector(".enter-registr");
+var link = document.querySelector(".account-menu-enter");
+
+close.addEventListener("click", function(event) {
+    event.preventDefault();
+    enterBlock.classList.remove("account-no-visible");
+    userPanel.classList.add("account-no-visible");
+})
+link.addEventListener("click", function(event) {
+    event.preventDefault();
+    enterBlock.classList.add("account-no-visible");
+    userPanel.classList.remove("account-no-visible");
+}); 
+
+        var linkbuy = document.querySelectorAll(".actions-buy");
+        var buy = document.querySelector(".modal-add-product");
+        var closebuy = document.querySelector(".modal-content-close-buy");
+        for (var i = 0; i < linkbuy.length; i++) {
+            linkbuy[i].addEventListener("click", function(event) { 
+                event.preventDefault();
+                buy.classList.add("modal-content-show");
+            });
+        }
+
+        closebuy.addEventListener("click",function(event) { 
+            event.preventDefault();
+            buy.classList.remove("modal-content-show");
+        });
         </script>
     </body>
 </html>
